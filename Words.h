@@ -244,6 +244,37 @@ Words.h
 #define CH_VS_H_EUFI     matrix[8] |= 0b0000001111000000
 #define CH_VS_H_ZWOEUFI    matrix[9] |= 0b1111110000000000
 
+// CH_VS_Z
+
+#define CH_VS_Z_VOR          matrix[3] |= 0b0000011100000000
+#define CH_VS_Z_AB           matrix[3] |= 0b0000000011000000
+#define CH_VS_Z_ESISCH_BM    0b1101111000000000
+#define CH_VS_Z_ESISCH       matrix[0] |=  CH_VS_Z_ESISCH_BM
+#define CH_VS_Z_ESISCH_R     matrix[0] &=  ~CH_VS_Z_ESISCH_BM
+#define CH_VS_Z_GSI          matrix[9] |= 0b0000000011100000
+#define CH_VS_Z_AM           matrix[0] |= 0b1000000000000000
+#define CH_VS_Z_PM           matrix[0] |= 0b0100000000000000
+
+#define CH_VS_Z_FUEF         matrix[3] |= 0b1111000000000000
+#define CH_VS_Z_ZAEAE        matrix[1] |= 0b0000000111100000
+#define CH_VS_Z_VIERTU       matrix[1] |= 0b1111111000000000
+#define CH_VS_Z_ZWAENZG      matrix[2] |= 0b0000011111100000
+#define CH_VS_Z_FUEFUZWAENZG matrix[2] |= 0b0111111111100000
+#define CH_VS_Z_HAUBI        matrix[4] |= 0b1111100000000000
+
+#define CH_VS_Z_H_EIS        matrix[6] |= 0b0000000011100000
+#define CH_VS_Z_H_ZWOEI      matrix[5] |= 0b0001111000000000
+#define CH_VS_Z_H_DRUE       matrix[5] |= 0b1110000000000000
+#define CH_VS_Z_H_VIER       matrix[8] |= 0b0000011111000000
+#define CH_VS_Z_H_FUEFI      matrix[5] |= 0b0000000111100000
+#define CH_VS_Z_H_SAECHSI    matrix[9] |= 0b1111111000000000
+#define CH_VS_Z_H_SIEBNI     matrix[8] |= 0b1111100000000000
+#define CH_VS_Z_H_ACHTI      matrix[7] |= 0b0000001111100000
+#define CH_VS_Z_H_NUENI      matrix[6] |= 0b1111000000000000
+#define CH_VS_Z_H_ZAENI      matrix[4] |= 0b0000001111000000
+#define CH_VS_Z_H_EUFI       matrix[6] |= 0b0000111100000000
+#define CH_VS_Z_H_ZWOEUFI    matrix[7] |= 0b1111110000000000
+
 // CH_BS
 
 #define CH_BS_VOR         matrix[3] |= 0b0011110000000000

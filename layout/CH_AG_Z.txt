@@ -1,0 +1,78 @@
+FRONTCOVER_CH_AG_Z - Swiss German AG Z
+======================================
+
+11x10 Letter Matrix
+-------------------
+     0 1 2 3 4 5 6 7 8 9 10
+ 0:  E S K E S C H A Z Ä H
+ 1:  Z W Ä N Z G F Ö I F I
+ 2:  Ö B E R V I E R T E L
+ 3:  V O R I A H A L B I Z
+ 4:  H A B B Z W Ö I D R Ü
+ 5:  F Ö I F I E Z Ä H N I
+ 6:  N Ü N I E L F I E I S
+ 7:  Z W Ö L F I A C H T I
+ 8:  V I E R I S I B N I R
+ 9:  S Ä C H S I T Z G S I
+
+
+Compact (10 rows x 11 columns)
+------------------------------
+ESKESCHAZÄH
+ZWÄNZGFÖIFI
+ÖBERVIERTEL
+VORIAHALBIZ
+HABBZWÖIDRÜ
+FÖIFIEZÄHNI
+NÜNIELFIEIS
+ZWÖLFIACHTI
+VIERISIBNIR
+SÄCHSITZGSI
+
+
+Word Positions (row, columns 0..10)
+-----------------------------------
+ES ESCH : row 0, columns 0..1 & 3..6  (0b1101111000000000)
+ZÄH     : row 0, columns 8..10        (0b0000000011100000)
+ZWÄNZG  : row 1, columns 0..5         (0b1111110000000000)
+FÖIF    : row 1, columns 6..9         (0b0000001111000000)
+ÖBER    : row 2, columns 0..3         (0b1111000000000000)
+VIERTEL : row 2, columns 4..10        (0b0000111111100000)
+VOR     : row 3, columns 0..2         (0b1110000000000000)
+HALBI   : row 3, columns 5..9         (0b0000011111000000)
+AB      : row 4, columns 1..2         (0b0110000000000000)
+GSI     : row 9, columns 8..10        (0b0000000011100000)
+
+Hours:
+1  EIS    : row 6, columns 8..10      (0b0000000011100000)
+2  ZWÖI   : row 4, columns 4..7       (0b0000111100000000)
+3  DRÜ    : row 4, columns 8..10      (0b0000000011100000)
+4  VIERI  : row 8, columns 0..4       (0b1111100000000000)
+5  FÖIFI  : row 5, columns 0..4       (0b1111100000000000)
+6  SÄCHSI : row 9, columns 0..5       (0b1111110000000000)
+7  SIBNI  : row 8, columns 5..9       (0b0000011111000000)
+8  ACHTI  : row 7, columns 6..10      (0b0000001111100000)
+9  NÜNI   : row 6, columns 0..3       (0b1111000000000000)
+10 ZÄHNI  : row 5, columns 6..10      (0b0000001111100000)
+11 ELFI   : row 6, columns 4..7       (0b0000111100000000)
+12 ZWÖLFI : row 7, columns 0..5       (0b1111110000000000)
+
+
+Time Display (5-minute steps)
+-----------------------------
+:00  ES ESCH <hour>
+:05  ES ESCH FÖIF AB <hour>
+:10  ES ESCH ZÄH AB <hour>
+:15  ES ESCH VIERTEL AB <hour>
+:20  ES ESCH ZWÄNZG AB <hour>
+:25  ES ESCH FÖIF VOR HALBI <hour+1>
+:30  ES ESCH HALBI <hour+1>
+:35  ES ESCH FÖIF ÖBER HALBI <hour+1>
+:40  ES ESCH ZWÄNZG VOR <hour+1>
+:45  ES ESCH VIERTEL VOR <hour+1>
+:50  ES ESCH ZÄH VOR <hour+1>
+:55  ES ESCH FÖIF VOR <hour+1>
+
+In-between minutes (:01-:04, :06-:09, ...):
+- 1 to 4 corner minute LEDs
+- optional "GSI" (row 9, columns 8..10) when enabled in settings

@@ -2348,7 +2348,7 @@ void setMode(Mode newMode)
     break;
 #endif
     case MODE_SET_GSI:
-      if((settings.mySettings.frontCover != FRONTCOVER_CH_BE) && (settings.mySettings.frontCover != FRONTCOVER_CH_ZH) && (settings.mySettings.frontCover != FRONTCOVER_CH_AG) && (settings.mySettings.frontCover != FRONTCOVER_CH_GR)) {
+      if((settings.mySettings.frontCover != FRONTCOVER_CH_BE) && (settings.mySettings.frontCover != FRONTCOVER_CH_ZH) && (settings.mySettings.frontCover != FRONTCOVER_CH_AG) && (settings.mySettings.frontCover != FRONTCOVER_CH_AG_Z) && (settings.mySettings.frontCover != FRONTCOVER_CH_GR)) {
         buttonModePressed();
       }
       break;
@@ -3226,7 +3226,7 @@ void handleButtonSettings()
         message += TXT_OFF;
         message += F(" </td></tr>");
     // ------------------------------------------------------------------------
-    if((settings.mySettings.frontCover == FRONTCOVER_CH_BE) || (settings.mySettings.frontCover == FRONTCOVER_CH_ZH) || (settings.mySettings.frontCover == FRONTCOVER_CH_AG) || (settings.mySettings.frontCover == FRONTCOVER_CH_GR)) {
+    if((settings.mySettings.frontCover == FRONTCOVER_CH_BE) || (settings.mySettings.frontCover == FRONTCOVER_CH_ZH) || (settings.mySettings.frontCover == FRONTCOVER_CH_AG) || (settings.mySettings.frontCover == FRONTCOVER_CH_AG_Z) || (settings.mySettings.frontCover == FRONTCOVER_CH_GR)) {
         message += F("<tr><td>");
         message += F(TXT_SHOW_GSI);
         message += F("</td><td>");
@@ -3594,7 +3594,7 @@ void handleCommitSettings()
     // ------------------------------------------------------------------------
     webServer.arg("ii") == "0" ? settings.mySettings.purist = false : settings.mySettings.purist = true;
     // ------------------------------------------------------------------------
-    if((settings.mySettings.frontCover == FRONTCOVER_CH_BE) || (settings.mySettings.frontCover == FRONTCOVER_CH_ZH) || (settings.mySettings.frontCover == FRONTCOVER_CH_AG) || (settings.mySettings.frontCover == FRONTCOVER_CH_GR)) {
+    if((settings.mySettings.frontCover == FRONTCOVER_CH_BE) || (settings.mySettings.frontCover == FRONTCOVER_CH_ZH) || (settings.mySettings.frontCover == FRONTCOVER_CH_AG) || (settings.mySettings.frontCover == FRONTCOVER_CH_AG_Z) || (settings.mySettings.frontCover == FRONTCOVER_CH_GR)) {
       webServer.arg("gs") == "0" ? settings.mySettings.chGsi = false : settings.mySettings.chGsi = true;
     }
     // ------------------------------------------------------------------------

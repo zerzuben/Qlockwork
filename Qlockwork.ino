@@ -2780,7 +2780,7 @@ void handleRoot()
     }
 #endif
     message += F("<span style=\"font-size:12px;\">");
-        message += F("<br><br><a href=\"http://shop.bracci.ch/\">zytQuadrat</a> was <i class=\"fa fa-code\"></i> with <i class=\"fa fa-heart\"></i> by <a href=\"https://github.com/ch570512/Qlockwork/\">ch570512</a> and <a href=\"https://github.com/bracci/Qlockwork/\">bracci</a>");
+        message += F("<br><br><a href=\"http://shop.bracci.ch/\">zytQuadrat</a> was <i class=\"fa fa-code\"></i> with <i class=\"fa fa-heart\"></i> by <a href=\"https://github.com/ch570512/Qlockwork/\">ch570512</a>, <a href=\"https://github.com/bracci/Qlockwork/\">bracci</a> and <a href=\"https://github.com/zerzuben/Qlockwork/\">Z</a>");
         message += F("<br>Firmware: ") + String(FIRMWARE_VERSION);
 #ifdef UPDATE_INFOSERVER
     if (updateInfo > int(FIRMWARE_VERSION))

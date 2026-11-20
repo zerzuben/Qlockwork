@@ -243,6 +243,7 @@ WiFiEventHandler wifiConnectHandler;
 WiFiEventHandler wifiDisconnectHandler;
 
 void onWifiConnect(const WiFiEventStationModeGotIP& event) {
+  WiFi.setSleepMode(WIFI_NONE_SLEEP);
   Serial.println("Connected to Wi-Fi sucessfully.");
   Serial.print("IP address: ");
   Serial.println(WiFi.localIP());
@@ -3890,6 +3891,7 @@ void postWiFiSetup (void) {
   else
   {
     WiFi.mode(WIFI_STA);
+    WiFi.setSleepMode(WIFI_NONE_SLEEP);
     WiFi.setAutoReconnect(true);
     WiFi.persistent(true);
     Serial.println("WLAN connected. Switching to STA mode.");
